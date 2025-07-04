@@ -315,7 +315,7 @@ qc.x(M[1])
 "-------------------------------------------------------------"
 
 expmod_gate = ExpMod(n, k)
-qc1.append(expmod_gate, list(range(0,num_q)))
+qc.append(expmod_gate, list(range(0,num_q)))
 
 qc.measure(e, creg)
 qc.draw(output="mpl")
