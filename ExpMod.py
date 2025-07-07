@@ -204,7 +204,7 @@ def SquareMod(n):
     
     qc.append(copy_gate, a[0:n] + t[:])
     qc.append(timesmod_gate, c[:] + a[:] + t[:] + M[:] + s[:] + t1[:] + t_a[:] + t_b[:])
-    qc.append(copy_gate_i, a[:n] + t[:])
+    qc.append(copy_gate_i, a[0:n] + t[:])
 
     return qc.decompose().to_gate()
 
